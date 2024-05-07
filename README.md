@@ -36,7 +36,7 @@ Install Terraform and the AWS Command Line Interface (CLI) on your local machine
 
 #### 2. Initialize your Terraform environment
 
-Inside the project directory, create a file named providers.tf to configure the specific cloud providers or services that your Terraform configuration will interact with.
+Inside the project directory, create a file named [providers.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/provider.tf) to configure the specific cloud providers or services that your Terraform configuration will interact with.
 
 ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/9a1a1258-8448-4215-ba99-221bd0dedef6)
 
@@ -45,14 +45,14 @@ Run the following command to initialize your Terraform environment
 ```hcl
 terraform init
 ```
-#### 3. Define your AWS Resource file ([main.tf]())
+#### 3. Define your AWS Resource file ([main.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/main.tf))
 
 Create a main.tf file. Here you define the resources you want to create or manage using Terraform.
 
  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/aca089ad-34c9-41d8-9f69-61776c67e443)
 
 
-#### 4. Create [variable.tf]() to define all necessary variables used in main.tf 
+#### 4. Create [variable.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/variables.tf) to define all necessary variables used in main.tf 
  
 ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/92735418-3bf9-4ca5-b7d3-767ce8905011)
 
@@ -80,7 +80,7 @@ The purpose of an S3 bucket ACL is to define who has access to the objects in th
 
 #### Step 8: Enable Static Website Hosting
 
-Now to enable Static Website Hosting first we need to put index.html and error.html in S3 bucket using "aws_s3_bucket_object" because both these files are needed in "aws_s3_bucket_website_configuration".
+Now to enable Static Website Hosting first we need to put [index.html](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/index.html) and [error.html](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/error.html) in S3 bucket using "aws_s3_bucket_object" because both these files are needed in "aws_s3_bucket_website_configuration".
 
  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2aaa27c8-980e-467d-9ce2-643c60eb286d)
 
@@ -93,7 +93,7 @@ Now to enable Static Website Hosting first we need to put index.html and error.h
  
 depends_on = [ aws_s3_bucket_acl.example ] means the website will only host if the acl is set to public-read.
 
-#### Step 10: Create output.tf to get website endpoint in the terminal itself.
+#### Step 10: Create [output.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/outputs.tf) to get website endpoint in the terminal itself.
  
 ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/b389e914-adfb-41cd-b542-aa3ab0c2ce9c)
 
