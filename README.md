@@ -118,5 +118,5 @@ terraform apply -auto-approve
 #### Step 12: Clean up Resources
 
 ```hcl
-terraform destroy
+terraform destroy -auto-approve
 ```
