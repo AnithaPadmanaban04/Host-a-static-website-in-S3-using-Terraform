@@ -77,21 +77,21 @@ Create an s3 bucket to store the files for hosting a website. S3 bucket name sho
 
 It is used to define and manage ownership controls for an Amazon S3 bucket, this ensures everything in the bucket is owned by us.
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/eb71e55c-998e-4b23-982a-91f486ea15eb)
+ ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/c5951e44-06d5-42cb-8d88-678f4b526aa2)
 
 
 #### Step 6: Resource: aws_s3_bucket_public_access_block.
 
 Allows you to enforce certain rules on an S3 bucket to control its public access. Setting all to false to make bucket public.
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/fdec45bb-eff3-49ed-b2ac-1a44aa0fa752)
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/47eac11c-392b-4ac9-84ed-4aa949bb2cda)
 
  
 #### Step 7: Resource: aws_s3_bucket_acl.
 
 The purpose of an S3 bucket ACL is to define who has access to the objects in the bucket and what level of access they have. ACLs can be used to control both public and private access to the objects. So, we have to make acl public-read.
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/89e53bef-6bca-4e29-acf5-32cec075810e)
+ ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e07572ef-8ab7-43c9-86dc-ca1027aea7b2)
 
 
 #### Step 8: Enable Static Website Hosting
