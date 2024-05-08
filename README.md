@@ -130,14 +130,29 @@ terraform plan
 terraform apply -auto-approve
 ```
  
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/7f0064e8-7bc2-422f-9aa4-c6597c6fd748)
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/0cb1f376-5772-445e-b388-99502e1ab5da)
+
+
+
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/7bbf60db-25cf-4ec1-a825-192fc40476a9)
+
+
 
 #### Step 11: Verify the Output in AWS Console
 
+index.html
 
- 
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/ea381267-9c19-41a5-bf7a-098f3cc72f0d)
+
+error.html
+
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2b2d5a14-4b24-4492-ae50-f3b4aa276c34)
+
 #### Step 12: Clean up Resources
 
 ```hcl
 terraform destroy -auto-approve
 ```
+
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/7879e6ef-614e-437a-bc29-7a72d39993cc)
+
