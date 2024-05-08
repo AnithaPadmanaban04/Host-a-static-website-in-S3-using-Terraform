@@ -32,29 +32,45 @@ Using Terraform to automate the deployment and management of S3 static website. 
 ## Steps
 #### 1. Create Terraform Environment
 
-Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and providing your AWS access key and secret key.
+- Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and provide your AWS access key and secret key. Check this [link](https://github.com/aniwardhan/Getting-Started-with-Terraform.git) to configure Terraform and AWS CLI
+        
+- Create a working directory in your local machine and open the folder in MS Visual Code Editor to start the project
+        
+  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2da1f423-a250-499b-b7b7-bce68ba35fb3)
+
 
 #### 2. Initialize your Terraform environment
 
-Inside the project directory, create a file named [providers.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/provider.tf) to configure the specific cloud providers or services that your Terraform configuration will interact with.
+* A provider in Terraform is a plugin that enables interaction with an API. This includes Cloud providers and Software-as-a-service providers. 
+* The providers are specified in the Terraform configuration code. They tell Terraform which services it needs to interact with.
+* Provider configurations should be declared in the root module of your Terraform project.
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/9a1a1258-8448-4215-ba99-221bd0dedef6)
+* Create a file named [providers.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/provider.tf) to configure the specific cloud providers or services that your Terraform configuration will interact with.
 
+  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e4ff15b4-43a7-4bd8-9140-bb8f4909f98d)
+
+Once File created run the terraform init command so that Terraform downloads necessary plugins and resources required for connecting to AWS and managing your infrastructure.
  
 Run the following command to initialize your Terraform environment
 ```hcl
 terraform init
 ```
+
+  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/41915893-cbfb-4a70-a4bd-d00926f6edbb)
+
+
 #### 3. Define your AWS Resource file ([main.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/main.tf))
 
 Create a main.tf file. Here you define the resources you want to create or manage using Terraform.
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/aca089ad-34c9-41d8-9f69-61776c67e443)
+Create an s3 bucket to store the files for hosting a website. S3 bucket name should be globally unique
 
+ ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/77590709-4cf7-402d-a638-7acab5ef701c)
+ 
 
 #### 4. Create [variable.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/variables.tf) to define all necessary variables used in main.tf 
  
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/92735418-3bf9-4ca5-b7d3-767ce8905011)
+  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e4e72eac-986b-431f-920a-4e50d353198f)
 
 
 #### Step 5: Resource: aws_s3_bucket_ownership_controls.
