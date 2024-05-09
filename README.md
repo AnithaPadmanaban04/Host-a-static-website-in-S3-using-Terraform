@@ -82,7 +82,10 @@ It is used to define and manage ownership controls for an Amazon S3 bucket, this
 
 #### Step 6: Resource: aws_s3_bucket_public_access_block.
 
-Allows you to enforce certain rules on an S3 bucket to control its public access. Setting all to false to make bucket public.
+This line of code defines if the contents of the bucket can be publicly accessed or not. Setting this to “true” will block public access. Setting all to false to make bucket public.
+
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/eec8890d-0eba-451c-921d-2c1233e01763)
+
 
 ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/47eac11c-392b-4ac9-84ed-4aa949bb2cda)
 
@@ -90,6 +93,11 @@ Allows you to enforce certain rules on an S3 bucket to control its public access
 #### Step 7: Resource: aws_s3_bucket_acl.
 
 The purpose of an S3 bucket ACL is to define who has access to the objects in the bucket and what level of access they have. ACLs can be used to control both public and private access to the objects. So, we have to make acl public-read.
+
+This part defines whether the bucket access will be private or not. In the AWS console, this is what it looks like.
+
+ ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/710ac1d3-a7b6-4993-b0f5-4a5ff51a0f83)
+
 
  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e07572ef-8ab7-43c9-86dc-ca1027aea7b2)
 
