@@ -164,3 +164,17 @@ terraform destroy -auto-approve
 
 ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/7879e6ef-614e-437a-bc29-7a72d39993cc)
 
+#### Reference Documents:
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object
+
