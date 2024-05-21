@@ -7,8 +7,7 @@ Here's a step-by-step guide for setting up a basic static website in an S3 bucke
 
 ## Architectural Diagram:
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/a85f7e80-bcd8-4e24-aea1-a713107fac03)
-
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/fff47c59-b66f-467f-ac1d-8e29b97d991e)
 
 ## Prerequisites:
 
@@ -34,11 +33,11 @@ Using Terraform to automate the deployment and management of S3 static website. 
 ## Steps
 #### 1. Create Terraform Environment
 
-- Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and provide your AWS access key and secret key. Check this [link](https://github.com/aniwardhan/Getting-Started-with-Terraform.git) to configure Terraform and AWS CLI
+- Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and provide your AWS access key and secret key. Check this [link](https://github.com/AnithaPadmanaban04/Getting-Started-with-Terraform.git) to configure Terraform and AWS CLI
         
 - Create a working directory in your local machine and open the folder in MS Visual Code Editor to start the project
         
-  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2da1f423-a250-499b-b7b7-bce68ba35fb3)
+  ![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/81eb9f91-4e9c-4102-9ea1-4b3628b6d0c4)
 
 
 #### 2. Initialize your Terraform environment
@@ -47,9 +46,10 @@ Using Terraform to automate the deployment and management of S3 static website. 
 * The providers are specified in the Terraform configuration code. They tell Terraform which services it needs to interact with.
 * Provider configurations should be declared in the root module of your Terraform project.
 
-* Create a file named [providers.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/provider.tf) to configure the specific cloud providers or services that your Terraform configuration will interact with.
+* Create a file named [providers.tf](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/blob/main/provider.tf) to configure the specific cloud providers or services that your Terraform configuration will interact with.
 
-  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e4ff15b4-43a7-4bd8-9140-bb8f4909f98d)
+ ![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/b8aea51d-0aab-46d7-87fb-e870b42302fc)
+
 
 Once File created run the terraform init command so that Terraform downloads necessary plugins and resources required for connecting to AWS and managing your infrastructure.
  
@@ -58,38 +58,38 @@ Run the following command to initialize your Terraform environment
 terraform init
 ```
 
-  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/41915893-cbfb-4a70-a4bd-d00926f6edbb)
+ ![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/4f04eeae-87df-4450-8db6-d3e68a40f351)
 
 
-#### 3. Define your AWS Resource file ([main.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/main.tf))
+#### 3. Define your AWS Resource file ([main.tf](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/blob/main/main.tf))
 
 Create a main.tf file. Here you define the resources you want to create or manage using Terraform.
 
 Create an s3 bucket to store the files for hosting a website. S3 bucket name should be globally unique
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/77590709-4cf7-402d-a638-7acab5ef701c)
- 
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/43ee2a9b-42bf-4a5f-951b-d550fbbe4f17)
 
-#### 4. Create [variable.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/variables.tf) to define all necessary variables used in main.tf 
  
-  ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e4e72eac-986b-431f-920a-4e50d353198f)
+#### 4. Create [variable.tf](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/blob/main/variables.tf) to define all necessary variables used in main.tf 
+ 
+ ![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/ff362351-d609-4a64-b09c-2c71c3544ee4)
 
 
 #### Step 5: Resource: aws_s3_bucket_ownership_controls.
 
 It is used to define and manage ownership controls for an Amazon S3 bucket, this ensures everything in the bucket is owned by us.
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/c5951e44-06d5-42cb-8d88-678f4b526aa2)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/4186c1eb-f6f7-4043-aed5-c25ee77c9121)
 
 
 #### Step 6: Resource: aws_s3_bucket_public_access_block.
 
 This line of code defines if the contents of the bucket can be publicly accessed or not. Setting this to “true” will block public access. Setting all to false to make bucket public.
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/eec8890d-0eba-451c-921d-2c1233e01763)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/32f8f278-96fd-4ff2-af43-d246813d0b73)
 
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/47eac11c-392b-4ac9-84ed-4aa949bb2cda)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/5ec2aff9-cb4c-4655-bf13-78f6b4c16c64)
 
  
 #### Step 7: Resource: aws_s3_bucket_acl.
@@ -98,35 +98,36 @@ The purpose of an S3 bucket ACL is to define who has access to the objects in th
 
 This part defines whether the bucket access will be private or not. In the AWS console, this is what it looks like.
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/710ac1d3-a7b6-4993-b0f5-4a5ff51a0f83)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/4350930b-909d-4853-af9f-d7a27a40cb4b)
 
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/e07572ef-8ab7-43c9-86dc-ca1027aea7b2)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/ed968869-ad48-4ee5-aba1-8e7e4589f923)
 
  
 #### Step 8: Upload static files into the S3 bucket
 
 Upload index.html and error.html to your local working directory and then add these files in code to upload to S3 bucket
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/821b12a8-54e6-4106-9541-afbb0ef1264e)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/121d209b-d37f-48ea-a8ec-66dd52a92407)
 
 
 #### Step 9: Enable Static Website Hosting Resource: aws_s3_bucket_website_configuration to host static web content that can be accessed via a web browser.
 
-Now to enable Static Website Hosting first we need to put [index.html](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/index.html) and [error.html](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/error.html) in S3 bucket using "aws_s3_bucket_object" because both these files are needed in "aws_s3_bucket_website_configuration".
+Now to enable Static Website Hosting first we need to put [index.html](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/blob/main/index.html) and [error.html](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/blob/main/error.html) in S3 bucket using "aws_s3_bucket_object" because both these files are needed in "aws_s3_bucket_website_configuration".
 
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2fc3f17b-4b5f-48cc-9f3f-300696e3e93e)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/822fdf9d-8f63-46de-9826-a1963bd2baa9)
 
 depends_on = [ aws_s3_bucket_acl.example ] means the website will only host if the acl is set to public-read.
 
 Verify Static Web Hosting enabled for the bucket
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2721a316-fd5d-4a61-8fc0-95adc39f36ee)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/88911429-11e3-414a-84b9-3e9d73b9ea1f)
 
 
-#### Step 10: Create [output.tf](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/blob/main/outputs.tf) to get website endpoint in the terminal itself.
+#### Step 10: Create [output.tf](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/blob/main/outputs.tf) to get website endpoint in the terminal itself.
  
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/35f540d8-e612-450d-bf6e-3e889f1cca37)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/d1e478ba-1ca4-4fd8-bd89-332a7e03d558)
+
 
 After creating all the necessary files execute the following Terraform commands 
 
@@ -140,23 +141,23 @@ terraform plan
 terraform apply -auto-approve
 ```
  
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/0cb1f376-5772-445e-b388-99502e1ab5da)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/10e5f692-b569-426f-8c10-7f755857ae0a)
 
 
-
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/7bbf60db-25cf-4ec1-a825-192fc40476a9)
-
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/dd284d92-fce8-49b5-ae5d-564e84e6f83a)
 
 
 #### Step 11: Verify the Output in AWS Console
 
 index.html
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/ea381267-9c19-41a5-bf7a-098f3cc72f0d)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/5148e260-550a-4d88-9662-65db4d75cbf1)
+
 
 error.html
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/2b2d5a14-4b24-4492-ae50-f3b4aa276c34)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/10825eb4-f43c-49c1-b445-10629d0a5814)
+
 
 #### Step 12: Clean up Resources
 
@@ -164,7 +165,9 @@ error.html
 terraform destroy -auto-approve
 ```
 
-![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/7879e6ef-614e-437a-bc29-7a72d39993cc)
+![image](https://github.com/AnithaPadmanaban04/Host-a-static-website-in-S3-using-Terraform/assets/170385807/c1edf391-6a5a-481f-8137-e10cbc8c2b49)
+
+
 
 #### Reference Documents:
 
