@@ -6,7 +6,9 @@ Hosting a static website on Amazon S3 using Terraform is a common way to deploy 
 Here's a step-by-step guide for setting up a basic static website in an S3 bucket using Terraform.
 
 ## Architectural Diagram:
- ![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/22b89081-22a7-471b-8706-0996499ce9d3)
+
+![image](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform/assets/80623694/a85f7e80-bcd8-4e24-aea1-a713107fac03)
+
 
 ## Prerequisites:
 
